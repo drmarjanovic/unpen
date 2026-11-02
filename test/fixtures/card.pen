@@ -1,0 +1,52 @@
+{
+  "version": "2.21",
+  "variables": {
+    "brand": { "type": "color", "value": "#1f6feb" },
+    "surface": { "type": "color", "value": "#ffffff" }
+  },
+  "children": [
+    {
+      "type": "frame",
+      "id": "button",
+      "name": "Button",
+      "reusable": true,
+      "x": 0,
+      "y": 0,
+      "layout": "horizontal",
+      "padding": [8, 16],
+      "fill": "$brand",
+      "cornerRadius": 6,
+      "children": [
+        { "type": "text", "id": "label", "name": "Label", "content": "Button", "fontSize": 14, "fill": "#ffffff" }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "card",
+      "name": "Profile card",
+      "x": 200,
+      "y": 0,
+      "width": 320,
+      "height": 200,
+      "layout": "vertical",
+      "gap": 12,
+      "padding": 16,
+      "fill": "$surface",
+      "children": [
+        { "type": "rectangle", "id": "avatar", "name": "Avatar", "width": 48, "height": 48, "fill": { "type": "image", "url": "assets/dot.png", "mode": "fill" } },
+        { "type": "rectangle", "id": "cover", "name": "Cover", "width": 48, "height": 48, "fill": [{ "type": "image", "url": "assets/missing.png" }] },
+        { "type": "ref", "id": "cta", "ref": "button", "descendants": { "label": { "content": "Follow" } } }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "empty",
+      "name": "Ünïcode · Frame",
+      "x": 600,
+      "y": 0,
+      "width": 100,
+      "height": 100,
+      "fill": "#eeeeee"
+    }
+  ]
+}

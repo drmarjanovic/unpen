@@ -1,0 +1,6 @@
+node_modules/
+dist/
+unpen-out/
+samples/
+.DS_Store
+.openpencil/
